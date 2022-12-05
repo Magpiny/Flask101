@@ -1,0 +1,4 @@
+include FlaskApp2/schema.sql
+graft FlaskApp2/static
+graft FlaskApp2/templates
+global-exclude *.pyc

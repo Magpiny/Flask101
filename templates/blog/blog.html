@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <h1>Email messaging</h1>
+
+    <h2>Hello {{ name }}  <a href="/login">Login</a> <a href="/register">Signup</a></h2>
+
+    <form action="/blog" method="get">
+        <div class="mb-3">
+          <label for="name" class="form-label">Name</label>
+          <input type="text" class="form-control" name="name" id="name" placeholder="Jane Doe">
+        </div>
+
+        <div class="mb-3">
+          <label for="email" class="form-label">Email address</label>
+          <input type="email" name="email" class="form-control" id="email" placeholder="name@example.com">
+        </div>
+
+        <div class="mb-3">
+          <label for="comment" class="form-label">Example textarea</label>
+          <textarea class="form-control" name="comment"  id="comment" rows="3"></textarea>
+        </div>
+
+        <div class="col-auto">
+            <button type="submit" class="btn btn-primary mb-3">Comment</button>
+        </div>
+
+    </form>
+
+{% endblock %}
+
+{% block sidebar %}
+  <div class="sidebar sticky-md-top">
+
+    <div class="sidebar-recents mt-3">
+      <h2 class="text-info display-5 text-decoration-underline pb-4 text-md-center">Recent Posts</h2>
+    </div>
+
+    <div class="sidebar-categories">
+      <h1 class="text-info display-5 text-decoration-underline pb-4 text-md-center">Categories</h1>
+    </div>
+  </div>
+{% endblock %}
